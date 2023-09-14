@@ -14,4 +14,12 @@ The data set required significant preprocessing and feature engineering. Followi
 
 ![image](https://github.com/wgemba/loan_default_prediction/assets/134420287/04d8dba7-b2ce-45b9-a4fc-62e86212f367)
 
+The full code for the feature processing can be seen in the file 'feature_engineering_and_visualization.ipynb'.
+
+### Specific Packages Used
+Certain features required the use of special packages and functions to convert from categorical to numeric datatype. Due to the large set of unique values for the feature 'Zip', rather than encoding the attribute I used the package 'pgeocode'. The package 'pgeocode' is a Python library that queries geospatial data (e.g., GPS coordinates, region name, municipality name) from the GeoNames database, using a postal code as input. Using this function, I created two new attributes 'latitude' and 'longitude' inplace of the 'Zip' feature. 
+
+The 'State' attribute and and the 'Industry' attribute (which was created based on a dictionary remapping of the NAICS attributed, using the official NAICS code dictionary) were one-hot-encoded using the OneHotEncoder function from the Scikit-Learn preprocessing package.
+
+## Neural Network Prediction Model Optimization and Model Evaluation.
 
