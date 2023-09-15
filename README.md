@@ -1,6 +1,6 @@
-# Business Loan Credit Worthiness Prediction using an Optimized Neural Network Model
-
+# Business Loan Creditworthiness Prediction using an Optimized Neural Network Model
 # Abstract
+This project aims to build an optimized multiple hidden layer neural network model to predict small buisness loan creditworthiness. In this project I perform heavy feature engineering and preprocessing, then using TensorFlow Keras I create an optimizing function that iteratively builds, trains, and tests different neural network models and returns the optimal model in accordance to various classification metrics. 
 
 # Data Feature Engineering
 ## About the Data
@@ -16,7 +16,7 @@ The data set required significant preprocessing and feature engineering. Followi
 
 The full code for the feature processing can be seen in the file 'feature_engineering_and_visualization.ipynb'.
 
-### Specific Packages Used
+### Specific Packages Used for Preprocessing
 Certain features required the use of special packages and functions to convert from categorical to numeric datatype. Due to the large set of unique values for the feature 'Zip', rather than encoding the attribute I used the package 'pgeocode'. The package 'pgeocode' is a Python library that queries geospatial data (e.g., GPS coordinates, region name, municipality name) from the GeoNames database, using a postal code as input. Using this function, I created two new attributes 'latitude' and 'longitude' inplace of the 'Zip' feature. 
 
 The 'State' attribute and and the 'Industry' attribute (which was created based on a dictionary remapping of the NAICS attributed, using the official NAICS code dictionary) were one-hot-encoded using the OneHotEncoder function from the Scikit-Learn preprocessing package.
